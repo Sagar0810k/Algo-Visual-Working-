@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithm Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sorting Visualizer</h1>
+            <p>Visualize different sorting algorithms in action</p>
+        </header>
+
+        <div class="controls">
+            <div class="input-section">
+                <label for="array-input">Enter numbers (comma separated):</label>
+                <input type="text" id="array-input" placeholder="e.g., 15, 78, 45, 9">
+                <button id="generate-random">Generate Random Array</button>
+            </div>
+
+            <div class="algorithm-section">
+                <label for="algorithm">Select Algorithm:</label>
+                <select id="algorithm">
+                    <option value="bubble">Bubble Sort</option>
+                    <option value="selection">Selection Sort</option>
+                    <option value="insertion">Insertion Sort</option>
+                    <option value="merge">Merge Sort</option>
+                    <option value="quick">Quick Sort</option>
+                </select>
+            </div>
+
+            <div class="speed-section">
+                <label for="speed">Animation Speed:</label>
+                <input type="range" id="speed" min="1" max="100" value="50">
+            </div>
+
+            <div class="button-section">
+                <button id="start-btn">Start Sorting</button>
+                <button id="reset-btn">Reset</button>
+            </div>
+        </div>
+
+        <div class="visualization-container">
+            <div id="array-container"></div>
+        </div>
+
+        <div class="info-panel">
+            <div class="algorithm-info">
+                <h3>Algorithm Information</h3>
+                <div id="algorithm-description">
+                    <p>Select an algorithm to see its description.</p>
+                </div>
+            </div>
+            <div class="complexity-info">
+                <h3>Time Complexity</h3>
+                <div id="time-complexity">
+                    <p>Best: -</p>
+                    <p>Average: -</p>
+                    <p>Worst: -</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
